@@ -1,11 +1,12 @@
 #Linear regression example
+import theano
 import theano.tensor as T
 from theano import function
 import numpy
 import sklearn.metrics
 
 def l2(x):
-    return T(x**2)
+    return T.sum(x**2)
 
 def squared_error(x,y):
     return (x-y) **2
